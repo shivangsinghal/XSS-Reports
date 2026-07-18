@@ -19,6 +19,11 @@ This is stored XSS — the payload persists in the database and executes for any
 4. Save/publish the article.
 5. View the article (own page or wherever it renders) — a confirm() dialog pops with 1, confirming stored execution.
 
+## Proof of Concept
+
+<img width="1908" height="758" alt="image" src="https://github.com/user-attachments/assets/8670396f-5326-485c-a684-7640bce96648" />
+
+
 ## Impact
 
 This is higher severity than reflected findings since the payload is persistent and requires no crafted link — anyone who views the article (other users, admins, moderators reviewing content) gets the payload executed in their browser automatically. This could lead to session/cookie theft, account takeover, or admin panel compromise if a privileged user (e.g., content moderator) opens the article for review.
