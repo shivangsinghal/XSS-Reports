@@ -22,6 +22,10 @@ The "Company Name" input field on the registration form doesn't sanitize input b
 
 
 
+https://github.com/user-attachments/assets/62e4c94b-16e5-42ee-b33d-59cf99d5dedc
+
+
+
 
 ## Impact
 
