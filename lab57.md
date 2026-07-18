@@ -16,6 +16,11 @@ The returnTo parameter is reflected back into the page without encoding. Payload
 2. Alert box pops with 1.
 3. View source — the quote/bracket sequence breaks out of the original attribute, and the raw <script> tag runs directly after it.
 
+## Proof of Concept
+
+<img width="1906" height="670" alt="image" src="https://github.com/user-attachments/assets/3ddf34ce-fe29-42ae-a25c-8cadbc0accf6" />
+
+
 ## Impact
 
 Since returnTo params are often used in redirect/login flows, this is worth flagging as higher risk — an attacker could combine this with the redirect logic to build a convincing phishing chain, or simply run JS in the victim's session for cookie theft, account takeover, or page defacement if a crafted link is clicked.
