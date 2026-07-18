@@ -19,6 +19,12 @@ This is stored XSS, not reflected — the payload persists and fires on every pa
 4. On the post-login page, a confirm() dialog pops with 1, confirming the payload executed from stored data.
 5. Check page source on the dashboard/welcome page — the full name field is rendered without encoding, letting the <img onerror> tag execute.
 
+## Proof of Concept
+
+<img width="1915" height="682" alt="image" src="https://github.com/user-attachments/assets/3f65c9f7-c82f-417f-98ae-b8cb3972342e" />
+
+
+
 ## Impact
 
 This is more serious than the reflected findings since it's persistent — the payload fires every time the page renders the name, no crafted link needed. If an admin panel, support dashboard, or any other user view displays this full name field (e.g., in a user list, chat, or order details), the payload would also fire in their session — leading to cookie theft, session hijacking, or admin account takeover depending on who views it.
