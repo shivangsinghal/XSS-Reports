@@ -14,6 +14,11 @@ The search parameter gets reflected back into a JS string on the page without be
 2. Alert box pops with 1, confirming execution.
 3. View page source — you'll see the input landing inside a JS string literal, and the injected quote breaks out of it.
 
+## Proof of Concept
+
+<img width="1908" height="665" alt="image" src="https://github.com/user-attachments/assets/44062ba8-3c21-475c-a677-50988e69d8a9" />
+
+
 ## Impact
 
 Attacker can run arbitrary JS in a victim's browser by sending them this link. Cookies, session tokens, page content all fair game if session cookies aren't HttpOnly. Could be used for account takeover, phishing overlays, or redirecting users elsewhere.
