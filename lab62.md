@@ -18,6 +18,12 @@ This is stored XSS — the payload persists in the database and executes for any
 3. Save the profile.
 4. View the profile page (or wherever the signature renders) — a confirm() dialog pops with 1, confirming stored execution.
 
+## Proof of Concept
+
+<img width="1917" height="745" alt="image" src="https://github.com/user-attachments/assets/927eb068-b48e-4aa8-84cf-c46cb195c337" />
+
+
+
 ## Impact
 Since signatures are commonly shown across multiple pages (profile view, posts, comments, forum threads), this payload could fire for any user who views content tied to this account — not just the owner. This could lead to session/cookie theft, account takeover, or wider compromise if other users or admins encounter the signature while browsing.
 
