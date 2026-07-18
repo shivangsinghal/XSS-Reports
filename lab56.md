@@ -16,6 +16,12 @@ The p parameter is reflected back into the page without encoding. Payload '"><sc
 2. Alert box pops with 1.
 3. View source — the quote/bracket sequence breaks out of the original attribute, and the raw <script> tag executes directly after it.
 
+## Proof of Concept
+
+<img width="1910" height="645" alt="image" src="https://github.com/user-attachments/assets/2186c87f-0230-4a7c-91d1-998739bff005" />
+
+
+
 ## Impact
 
 Attacker can send a victim this link and run arbitrary JS in their browser under the kzlabs.in origin. Session cookie theft (if not HttpOnly), account takeover, phishing overlays, or redirecting the user to an attacker-controlled page are all possible.
