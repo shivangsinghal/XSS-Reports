@@ -16,6 +16,11 @@ A path segment in the comments API route (t3_u9po1l...) is reflected back into t
 2. A confirm() dialog pops with 1, confirming execution.
 3. View source — the quote/bracket sequence breaks out of the original attribute where the thread/comment ID is reflected, and the <img onerror> tag runs directly after it.
 
+## Proof of Concept
+
+<img width="1913" height="535" alt="image" src="https://github.com/user-attachments/assets/8b189366-69be-4f3a-96f2-7878e97a38db" />
+
+
 ## Impact
 Anyone who clicks a crafted thread/comment link like this gets arbitrary JS executed in their browser under the kzlabs.in origin. This could be used for cookie theft, session hijacking, or redirecting/phishing users browsing shared comment links — especially risky if this route is publicly shared/indexed like real Reddit permalinks tend to be.
 
