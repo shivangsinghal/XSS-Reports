@@ -16,6 +16,11 @@ The username segment of the URL path (/account/{username}/messages) is reflected
 2. Alert box pops with 1.
 3. View source — the quote/bracket sequence breaks out of the original attribute (likely where the username is displayed), and the raw <script> tag runs directly after it.
 
+## Proof of Concept
+
+<img width="1915" height="575" alt="image" src="https://github.com/user-attachments/assets/494f0817-b4f4-4ba8-a1be-651ea863500d" />
+
+
 ## Impact
 Anyone who clicks a crafted profile link like this gets arbitrary JS executed in their session on kzlabs.in. Since this is under /account/, it's likely reachable while a user is logged in — meaning cookie theft, account takeover, or session hijacking are realistic outcomes. Could also be used to impersonate the "MemeKing99" account context to phish other users viewing shared links.
 
